@@ -40,7 +40,7 @@ env:
 jobs:
   deploy:
     name: Deploy
-    runs-on: hykang-runner
+    runs-on: self-hosted
     environment: ${{ github.event.release.name }}
 
     steps:
