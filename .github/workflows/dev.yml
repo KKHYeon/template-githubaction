@@ -34,8 +34,8 @@ on:
 env:
   AWS_REGION: ap-northeast-2                   # set this to your preferred AWS region, e.g. us-west-1
   ECR_REPOSITORY: test-githubaction           # set this to your Amazon ECR repository name
-  RELEASE_NAME: ${GITHUB_REF}
-  IMAGE_TAG: ${github.event.release.name}
+  RELEASE_NAME: ${{ github.event.release.name }}
+  IMAGE_TAG: ${GITHUB_REF_NAME}
   
 jobs:
   deploy:
